@@ -1,0 +1,6 @@
+puts p print
+$stdin.gets.chomp
+def end return
+ARGV
+File.open  read write close truncate seek
+Array.each {|item| puts item}
