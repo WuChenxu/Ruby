@@ -1,5 +1,5 @@
 class QuackBehavior
     def quack
-        puts "empty QuackBehavior"
+        raise "This is an abstract method."
     end
 end

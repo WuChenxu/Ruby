@@ -19,7 +19,7 @@ class Duck
     end
     
     def display
-        puts "I am a virtual duck."
+        raise "I am a virtual method."
     end
 
     def perform_quack

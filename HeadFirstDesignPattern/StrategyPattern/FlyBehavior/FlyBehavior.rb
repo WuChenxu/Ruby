@@ -1,6 +1,6 @@
 
 class FlyBehavior
     def fly 
-        puts "empty fly behavior"
+        raise "This is an abstract method."
     end
 end
