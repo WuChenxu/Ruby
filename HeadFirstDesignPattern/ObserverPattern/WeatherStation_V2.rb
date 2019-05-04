@@ -16,9 +16,9 @@ class WeatherData
 end
 
 class CurrentStatusDisplay
-    def initialize(subject)
-        subject.add_observer(self)
-    end
+    # def initialize(subject)
+    #     subject.add_observer(self)
+    # end
     
     def update(obj)
         puts "[1]#{obj.time}  Current conditions:#{obj.temperature} F degrees, and #{obj.huminity}% huminity."
@@ -26,9 +26,9 @@ class CurrentStatusDisplay
 end
 
 class HeatIndexDisp 
-    def initialize(subject)
-        subject.add_observer(self)
-    end
+    # def initialize(subject)
+    #     subject.add_observer(self)
+    # end
     
     def update(obj)
         puts "[2]#{obj.time}  Heat index:#{(obj.temperature+obj.huminity+obj.persure)/3}."
@@ -36,8 +36,10 @@ class HeatIndexDisp
 end
 
 weatherData = WeatherData.new
-currDisp = CurrentStatusDisplay.new(weatherData)
-heatIndexDisp = HeatIndexDisp.new(weatherData)
+currDisp = CurrentStatusDisplay.new
+heatIndexDisp = HeatIndexDisp.new
+weatherData.add_observer(currDisp)
+weatherData.add_observer(heatIndexDisp)
 puts "==observers : #{weatherData.count_observers}."
 weatherData.set_meas(80, 65, 30.4)
 weatherData.set_meas(82, 70, 29.2)
