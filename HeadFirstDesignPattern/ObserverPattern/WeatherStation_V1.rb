@@ -10,13 +10,17 @@ module Observable
     end
 
     def delete_observer(o)
-        @observers.delete(o) if @observers.include?(0)
+        @observers.delete(o) if @observers.include?(o)
     end
 
     def notify_observers
         @observers.each do |o| 
             o.update self
         end
+    end
+    
+    def count_observers
+        @observers.size
     end
 end
 
@@ -103,12 +107,13 @@ weatherData.add_observer(curDisp)
 weatherData.add_observer(curDisp)
 weatherData.add_observer(statisticsDisp)
 weatherData.add_observer(heatDisp)
-
+puts "==observers : #{weatherData.count_observers}."
 weatherData.set_meas(80, 65, 30.4)
 weatherData.set_meas(82, 70, 29.2)
 weatherData.set_meas(78, 90, 29.2)
 
 weatherData.delete_observer(heatDisp)
+puts "==observers : #{weatherData.count_observers}."
 weatherData.set_meas(82, 70, 29.2)
 weatherData.set_meas(78, 90, 29.2)
 
