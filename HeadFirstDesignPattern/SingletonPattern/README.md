@@ -6,4 +6,5 @@ this is exapmes of singleton pattern written in ruby.
 
 
 
-UML
+
+![singleton pattern UML](https://github.com/WuChenxu/Ruby/blob/master/HeadFirstDesignPattern/SingletonPattern/singleton_pattern.svg)
