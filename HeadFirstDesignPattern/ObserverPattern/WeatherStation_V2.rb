@@ -1,3 +1,4 @@
+# ruby lib: https://github.com/ruby/ruby/blob/d48783bb0236db505fe1205d1d9822309de53a36/lib/observer.rb
 require 'Observer'
 
 class WeatherData
