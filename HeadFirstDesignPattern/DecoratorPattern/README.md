@@ -5,3 +5,4 @@ this is an example of decorator pattern written in Ruby
 how to run:
 ruby main.rb 1 # method_missing
 ruby main.rb 0 # plain old ruby object
+
